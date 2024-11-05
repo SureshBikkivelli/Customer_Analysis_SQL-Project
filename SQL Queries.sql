@@ -70,6 +70,8 @@ from sales s join menu m
 on s.product_id = m.product_id
 group by customer_id;
 
+
+
 -- 2. How many days has each customer visited the restaurant?
 
 select  
@@ -78,7 +80,6 @@ select
 from sales
 group by customer_id
 order by customer_id;
-
 
 
 
