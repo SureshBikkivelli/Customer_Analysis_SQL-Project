@@ -3,25 +3,11 @@ This project analyzes customer behavior, spending patterns, and menu preferences
 
 
 
-![image](https://github.com/user-attachments/assets/67dd0a17-114e-49f5-9d12-f3e09ac0e4a1)
+* We have these below 3 Tables
 
-
-
-
-
-![image](https://github.com/user-attachments/assets/f0eab2a5-ad7a-45d3-a8c1-aaa00975cc56)
-
-
-
-
-
-![image](https://github.com/user-attachments/assets/85a55a16-7618-4549-bc6b-0949218abd66)
-
-
-
-
-
+  				
 		
 				
 				
-![image](https://github.com/user-attachments/assets/4ac21f7f-297b-4898-98ee-ec9f5e2e6067)
+![image](https://github.com/user-attachments/assets/d4498a1c-6126-42b4-aa98-c8a95b0ae146)
+
