@@ -28,16 +28,21 @@ Now we are getting insights from this data by finding solutions for below questi
 
 
 
+
+
  -- 1. What is the total amount each customer spent at the restaurant?  
 
-select customer_id,
-	   sum(price) as Total_amount
-from sales s join menu m
+select 
+	customer_id,
+	sum(price) as Total_amount
+from sales s 
+join menu m
 	on s.product_id = m.product_id
 group by customer_id;
 
 
 Result:
+
 
 ![image](https://github.com/user-attachments/assets/6b514c71-46d0-49af-899f-68e5a5945fd3)
 
