@@ -55,19 +55,17 @@ VALUES
 
 
 
-
-
 /* ----------------------
    Questions for Insights
    ---------------------- */
 
-use PracticeDB
+
 
 -- 1. What is the total amount each customer spent at the restaurant?  
 
 select 
 	customer_id,
-    sum(price) as total_amount
+	sum(price) as total_amount
 from sales s join menu m
 on s.product_id = m.product_id
 group by customer_id;
@@ -155,7 +153,6 @@ where product_rank = 1;
 
 
 
-
 -- 6. Which item was purchased first by the customer after they became a member?
 
 With Purchased_After_Member as (
@@ -179,7 +176,6 @@ select
     product_name
 FROM Purchased_After_Member
 where Rnumber = 1;
-
 
 
 
@@ -229,7 +225,6 @@ order by s.customer_id;
 
 
 
-
 -- 9.  If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
 
 With Each_item_Points as (
@@ -257,10 +252,8 @@ Group by customer_id;
 
 
 
-/*
- 10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, 
-not just sushi - how many points do customer A and B have at the end of January?
-*/
+/*  10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, 
+not just sushi - how many points do customer A and B have at the end of January?  */
 
 With Order_Points AS(
 SELECT  
@@ -292,9 +285,8 @@ GROUP BY customer_id;
 
 
 
-
-
--- 11.This Query is for calculating that how many points do customer A and B have with conditions are item 'sushi' have 2x points and remaining items are before membership is 1x and after membership is 2x.
+/* -- 11.This Query is for calculating that how many points do customer A and B have with 
+conditions are item 'sushi' have 2x points and remaining items are before membership is 1x and after membership is 2x.   */
 
 With Order_Points AS(
 SELECT  
