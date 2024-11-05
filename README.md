@@ -13,7 +13,7 @@ This project analyzes customer behavior, spending patterns, and menu preferences
 
 
 
-Now we are getting insights from this data by finding solutions for below questions
+Now we are getting insights from this data by finding solutions for below questions ?
 
  1. What is the total amount each customer spent at the restaurant?
  2. How many days has each customer visited the restaurant?
@@ -25,3 +25,20 @@ Now we are getting insights from this data by finding solutions for below questi
  8. What is the total items and amount spent for each member before they became a member?
  9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
 10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?
+
+
+
+ -- 1. What is the total amount each customer spent at the restaurant?  
+
+select customer_id,
+	   sum(price) as Total_amount
+from sales s join menu m
+	on s.product_id = m.product_id
+group by customer_id;
+
+
+Result:
+
+![image](https://github.com/user-attachments/assets/6b514c71-46d0-49af-899f-68e5a5945fd3)
+
+
