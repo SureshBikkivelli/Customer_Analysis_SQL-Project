@@ -42,10 +42,9 @@ on s.product_id = m.product_id
 group by customer_id;
 ```
 
-![image](https://github.com/user-attachments/assets/7187dfb1-3a75-453c-87af-4a28bcf267c5)
 
+![image](https://github.com/user-attachments/assets/d9782bf9-8d12-4575-a661-25280c514406)
 
-![image](https://github.com/user-attachments/assets/1d854a7a-6316-4d4f-a936-a14f182e5afc)
 
 
 
