@@ -98,7 +98,9 @@ where Rnumber = 1;
  order by s.customer_id;
 ```
 
- 
+
+![image](https://github.com/user-attachments/assets/e53f7d6d-bb0d-4f9c-b7d2-5539c3d2a272)
+
 
 ### Q5. Which item was the most popular for each customer?
 ```sql
@@ -131,6 +133,8 @@ where product_rank = 1;
 
 
 
+![image](https://github.com/user-attachments/assets/65927b2e-e0c5-4699-9d50-8bbee645b578)
+
 
 ### Q6. Which item was purchased first by the customer after they became a member?
 ```sql
@@ -156,6 +160,9 @@ select
 FROM Purchased_After_Member
 where Rnumber = 1;
 ```
+
+
+![image](https://github.com/user-attachments/assets/f6dfb8f2-2eab-4222-bb77-b5cf039aa3cd)
 
 
 
@@ -184,6 +191,8 @@ FROM Purchased_Before_Member
 where Rnumber = 1;
 ```
 
+![image](https://github.com/user-attachments/assets/a51ccbd8-eddd-457e-9fa5-b8803f85e618)
+
 
 
 ### Q8. What is the total items and amount spent for each member before they became a member?
@@ -201,6 +210,9 @@ where s.order_date < mem.join_date      -- orders before member
 group by s.customer_id
 order by s.customer_id;
 ```
+
+![image](https://github.com/user-attachments/assets/d8caad0c-7f2f-4b53-b1fc-9e1e563582b0)
+
 
 
 
@@ -228,6 +240,7 @@ From Each_item_Points
 Group by customer_id;
 ```
 
+![image](https://github.com/user-attachments/assets/96305842-5726-44cc-98ae-cc67f5f8bd9c)
 
 
 
@@ -261,6 +274,7 @@ FROM Order_Points
 GROUP BY customer_id;
 ```
 
+![image](https://github.com/user-attachments/assets/3cbb3ab4-7229-4491-9879-91aba6fd9626)
 
 
 
@@ -292,4 +306,7 @@ SELECT
 FROM Order_Points
 GROUP BY customer_id;
 ```
+
+![image](https://github.com/user-attachments/assets/50bf512d-0ab3-416f-a099-e9b4c5161fbf)
+
 
