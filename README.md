@@ -60,6 +60,8 @@ on s.product_id = m.product_id
 group by customer_id;
 ```
 
+![image](https://github.com/user-attachments/assets/5295a355-bb6d-4467-b0d9-517aa2d67dbc)
+
 
 ### Q2. How many days has each customer visited the restaurant?
 
