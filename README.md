@@ -277,7 +277,7 @@ GROUP BY customer_id;
 
 
 
-###  Q11.This Query is for calculating that how many points do customer A and B have with conditions are item 'sushi' have 2x points and remaining items are before membership is 1x and after membership is 2x.  
+###  Q11. This Query is for calculating that how many points do customer A and B have with conditions are item 'sushi' have 2x points and remaining items are before membership is 1x and after membership is 2x.  
 ```sql
 With Order_Points AS(
 SELECT  
@@ -307,4 +307,45 @@ GROUP BY customer_id;
 
 ![image](https://github.com/user-attachments/assets/50bf512d-0ab3-416f-a099-e9b4c5161fbf)
 
+
+
+
+
+
+
+# Insights and some key points 
+
+
+### 1. Total Spending by Customers
+- **Insight:** I calculated the total amount each customer spent at the restaurant by joining the `sales` and `menu` tables, multiplying the number of times each item was ordered by its price. This provides a clear view of customer value.
+
+### 2. Frequency of Visits
+- **Insight:** I determined how many unique days each customer visited by counting distinct `order_date` entries in the `sales` table, which can help in understanding customer engagement and loyalty.
+
+### 3. First Item Purchased
+- **Insight:** By ordering the sales records by date, I identified the first menu item purchased by each customer. This can give insights into customer preferences right at the start of their relationship with the diner.
+
+### 4. Most Purchased Item
+- **Insight:** I aggregated purchase counts across all customers to identify the most popular item on the menu. This helps to understand product performance and can inform inventory and marketing strategies.
+
+### 5. Popularity by Customer
+- **Insight:** I analyzed the purchase data to find out which item was most frequently bought by each customer, revealing individual preferences that could help tailor marketing efforts.
+
+### 6. First Purchase After Membership
+- **Insight:** I tracked purchases made by customers after their join date to find the first item they bought as members, which could indicate the effectiveness of membership incentives.
+
+### 7. Purchase Just Before Membership
+- **Insight:** I identified which item each customer purchased just before becoming a member, potentially highlighting their interests and helping design targeted promotions for new members.
+
+### 8. Total Items and Spending Before Membership
+- **Insight:** I aggregated the total number of items and amount spent by each customer before they joined, providing a pre-membership value assessment which could inform retention strategies.
+
+### 9. Customer Points Calculation
+- **Insight:** I calculated the points each customer earned based on their spending, considering special multipliers for certain items. This is important for understanding loyalty program dynamics.
+
+### 10. Points Accumulation in First Week
+- **Insight:** I evaluated how many points customers A and B accumulated in the first week after joining, applying a points multiplier for that period. This metric can help assess the immediate impact of loyalty programs on customer behavior.
+
+### Conclusion
+These insights not only demonstrate my ability to manipulate and analyze SQL data effectively, but also show how SQL queries can drive business decisions and enhance customer relationships. I can leverage these findings to suggest strategies for customer engagement, retention, and product offerings. 
 
