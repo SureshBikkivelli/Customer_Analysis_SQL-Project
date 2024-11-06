@@ -40,11 +40,12 @@ select
 from sales s join menu m
 on s.product_id = m.product_id
 group by customer_id;
-```
-A	76
+
+customer_id	total_amount
 B	74
 C	36
-
+A	76
+```
 
 
 ### Q1. What is the total amount each customer spent at the restaurant?  
