@@ -40,7 +40,6 @@ select
 from sales s join menu m
 on s.product_id = m.product_id
 group by customer_id;
-'''
 
 jgjfgh
 
