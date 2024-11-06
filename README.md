@@ -124,7 +124,7 @@ select customer_id,
 from CTE 
 )
 select customer_id,
-	   product_id,
+       product_id,
        product_name,
        customer_wise_item_count
 from popular_product
@@ -140,7 +140,7 @@ where product_rank = 1;
 ```sql
 With Purchased_After_Member as (
 SELECT
-	s.customer_id,
+    s.customer_id,
     s.product_id,
     s.order_date,
     mem.join_date,
@@ -155,7 +155,7 @@ FROM sales s
 where s.order_date >= mem.join_date
 )
 select 
-	customer_id,
+    customer_id,
     product_name
 FROM Purchased_After_Member
 where Rnumber = 1;
@@ -170,7 +170,7 @@ where Rnumber = 1;
 ```sql
 With Purchased_Before_Member as (
 SELECT
-	s.customer_id,
+    s.customer_id,
     s.product_id,
     s.order_date,
     mem.join_date,
@@ -181,11 +181,11 @@ FROM sales s
  JOIN menu m
       on s.product_id = m.product_id 
  JOIN members mem
-       on s.customer_id = mem.customer_id
+      on s.customer_id = mem.customer_id
 where s.order_date < mem.join_date
 )
 select 
-	customer_id,
+    customer_id,
     product_name
 FROM Purchased_Before_Member
 where Rnumber = 1;
@@ -198,7 +198,7 @@ where Rnumber = 1;
 ### Q8. What is the total items and amount spent for each member before they became a member?
 ```sql
 SELECT
-	s.customer_id,
+    s.customer_id,
     count(s.product_id) as Total_items,
     sum(m.price) as Spent_amount
 FROM sales s
@@ -221,20 +221,20 @@ order by s.customer_id;
 With Each_item_Points as (
 select 
 	s.customer_id,
-    m.product_id,
+        m.product_id,
 	m.product_name, 
-    m.price,
+        m.price,
    	Case 
-    	When m.product_name = 'sushi' Then m.price*20 
-       	Else m.price*10
-    End as Points
+    		When m.product_name = 'sushi' Then m.price*20 
+       		Else m.price*10
+        End as Points
 FROM sales s
  JOIN menu m
       on s.product_id = m.product_id 
 order by s.customer_id
 )
 select 
-	customer_id,
+    customer_id,
     sum(Points) as Total_Points
 From Each_item_Points
 Group by customer_id;
@@ -248,15 +248,15 @@ Group by customer_id;
 ```sql
 With Order_Points AS(
 SELECT  
-  	s.customer_id,
+    s.customer_id,
     s.product_id,
     s.order_date,
     mem.join_date,
     m.product_name,
     m.price,
-	Case 
+    Case 
     	When s.order_date between mem.join_date and DATEADD(DAY, 6, mem.join_date)  Then m.price*20    -- Fetching 7 Days including join_date
-  		When m.product_name = 'sushi'  Then m.price*20
+        When m.product_name = 'sushi'  Then m.price*20
         Else m.price*10
     End as Points
 FROM sales s
@@ -281,13 +281,13 @@ GROUP BY customer_id;
 ```sql
 With Order_Points AS(
 SELECT  
-  	s.customer_id,
+    s.customer_id,
     s.product_id,
     s.order_date,
     mem.join_date,
     m.product_name,
     m.price,
-	Case 
+    Case 
     	When s.order_date < mem.join_date and m.product_name != 'sushi' 
         Then m.price*10
         Else m.price*20 
