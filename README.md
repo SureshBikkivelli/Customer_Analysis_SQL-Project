@@ -2,7 +2,7 @@
 This project analyzes customer behavior, spending patterns, and menu preferences in a restaurant, focusing on visit frequency and loyalty program impact. It leverages data to optimize customer engagement, identify popular items, and calculate loyalty points for personalized rewards.
 
 
-<pre>'''
+
 * We have these below 3 Tables
 
   				
@@ -12,7 +12,7 @@ This project analyzes customer behavior, spending patterns, and menu preferences
 ![image](https://github.com/user-attachments/assets/d4498a1c-6126-42b4-aa98-c8a95b0ae146)
 
 
-
+<pre>
 Now we are getting insights from this data by finding solutions for below questions ?
 
  1. What is the total amount each customer spent at the restaurant?
@@ -26,19 +26,17 @@ Now we are getting insights from this data by finding solutions for below questi
  9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
 10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?
 
-'''</pre>
+</pre>
 
 
 
 ###  Q1. What is the total amount each customer spent at the restaurant? 
 
 
-<pre>'''sql
-select 
+<pre>'''sqlselect 
 	customer_id,
 	sum(price) as total_amount
 from sales s join menu m
 on s.product_id = m.product_id
-group by customer_id;
-'''</pre>
+group by customer_id;'''</pre>
 
