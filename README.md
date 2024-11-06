@@ -244,8 +244,7 @@ Group by customer_id;
 
 
 
-### /*  Q10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, 
-###         not just sushi - how many points do customer A and B have at the end of January?  */
+###  Q10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?  
 ```sql
 With Order_Points AS(
 SELECT  
@@ -278,8 +277,7 @@ GROUP BY customer_id;
 
 
 
-### /* Q11.This Query is for calculating that how many points do customer A and B have with 
-###        conditions are item 'sushi' have 2x points and remaining items are before membership is 1x and after membership is 2x.   */
+###  Q11.This Query is for calculating that how many points do customer A and B have with conditions are item 'sushi' have 2x points and remaining items are before membership is 1x and after membership is 2x.  
 ```sql
 With Order_Points AS(
 SELECT  
