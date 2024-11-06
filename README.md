@@ -42,3 +42,15 @@ on s.product_id = m.product_id
 group by customer_id;
 </pre>
 
+
+markdown
+
+```sql
+SELECT 
+    CATEGORY,
+    COUNT(*) AS TOTALSALES_COUNT, 
+    SUM(TOTAL_SALE) AS TOTAL_AMOUNT
+FROM RETAIL 
+GROUP BY CATEGORY;
+
+
