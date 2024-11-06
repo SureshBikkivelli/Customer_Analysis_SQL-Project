@@ -30,24 +30,6 @@ Now we are getting insights from this data by finding solutions for below questi
 
 
 
-###  Q1. What is the total amount each customer spent at the restaurant? 
-
-
-```sql
-select 
-	customer_id,
-	sum(price) as total_amount
-from sales s join menu m
-on s.product_id = m.product_id
-group by customer_id;
-```
-
-
-![image](https://github.com/user-attachments/assets/d9782bf9-8d12-4575-a661-25280c514406)
-
-
-
-
 
 ### Q1. What is the total amount each customer spent at the restaurant?  
 
@@ -74,6 +56,8 @@ group by customer_id
 order by customer_id;
 ```
 
+![image](https://github.com/user-attachments/assets/5a738777-28d1-4139-b6e5-72b7be4bf639)
+
 
 ### Q3. What was the first item from the menu purchased by each customer?
 ```sql
@@ -89,6 +73,8 @@ select customer_id, order_date, product_name
 from cte 
 where Rnumber = 1;
 ```
+
+![image](https://github.com/user-attachments/assets/c72ccb36-a41b-48c8-b367-77c972dc3b9b)
 
 
 ### Q4. What is the most purchased item on the menu and how many times was it purchased by all customers?
