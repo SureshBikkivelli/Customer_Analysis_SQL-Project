@@ -41,10 +41,13 @@ from sales s join menu m
 on s.product_id = m.product_id
 group by customer_id;
 
+Result:	
 customer_id	total_amount
 B	74
 C	36
 A	76
+![image](https://github.com/user-attachments/assets/7187dfb1-3a75-453c-87af-4a28bcf267c5)
+
 ```
 
 
